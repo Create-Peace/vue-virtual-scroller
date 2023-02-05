@@ -341,10 +341,12 @@ export default {
     },
 
     handleVisibilityChange (isVisible, entry) {
+      console.log('entry', entry, this.ready)
       if (this.ready) {
         if (isVisible || entry.boundingClientRect.width !== 0 || entry.boundingClientRect.height !== 0) {
           this.$emit('visible')
           requestAnimationFrame(() => {
+            console.log('entry::::')
             this.updateVisibleItems(false)
           })
         } else {
