@@ -26,6 +26,7 @@
       class="vue-recycle-scroller__item-wrapper"
       :class="listClass"
     >
+    <component :is="bodyTag">
       <component
         :is="itemTag"
         v-for="view of pool"
@@ -53,6 +54,7 @@
           :active="view.nr.used"
         />
       </component>
+    </component>
 
       <slot
         name="empty"
@@ -96,7 +98,10 @@ export default {
 
   props: {
     ...props,
-
+    bodyTag: {
+      type: String,
+      default: 'div'
+    },
     itemSize: {
       type: Number,
       default: null,
