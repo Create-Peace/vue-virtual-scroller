@@ -9,6 +9,8 @@ import SimpleList from './components/SimpleList.vue'
 import HorizontalDemo from './components/HorizontalDemo.vue'
 import ChatDemo from './components/ChatDemo.vue'
 import GridDemo from './components/GridDemo.vue'
+import VirtualTable from './components/VirtualTable.vue'
+
 
 Vue.use(VueRouter)
 
@@ -22,5 +24,7 @@ export default new VueRouter({
     { path: '/horizontal', name: 'horizontal', component: HorizontalDemo },
     { path: '/chat', name: 'chat', component: ChatDemo },
     { path: '/grid', name: 'grid', component: GridDemo },
+    { path: '/table', name: 'table', component: VirtualTable }
+    
   ],
 })

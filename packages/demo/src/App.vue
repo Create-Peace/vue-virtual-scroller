@@ -32,6 +32,9 @@
       <router-link :to="{ name: 'grid' }">
         Grid demo
       </router-link>
+      <router-link :to="{ name: 'table' }">
+        Table demo
+      </router-link>
     </nav>
     <router-view class="page" />
   </div>
